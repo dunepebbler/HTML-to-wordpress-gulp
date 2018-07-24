@@ -1,1 +1,2 @@
-# HTML-to-wordpress-gulp
+# HTML to wordpress with gulp
+
