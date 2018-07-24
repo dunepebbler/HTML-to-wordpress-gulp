@@ -1,0 +1,37 @@
+{
+  "name": "testing",
+  "version": "0.1.0",
+  "description": "Test template",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "gulp-ext-replace": "^0.2.0",
+    "gulp-header": "^1.2.2",
+    "gulp-html-replace": "^1.5.5",
+    "gulp-htmlsplit": "^1.1.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-insert-lines": "0.0.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-remove-code": "^1.0.2",
+    "gulp-remove-html": "^1.1.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-replace-task": "^0.11.0",
+    "gulp-util": "^3.0.7",
+    "run-sequence": "^1.1.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pebbler/gulp-webapp-wp-template-automation.git"
+  },
+  "author": "Pebbler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pebbler/gulp-webapp-wp-template-automation/issues"
+  },
+  "homepage": "https://github.com/Pebbler/gulp-webapp-wp-template-automation#readme"
+}
