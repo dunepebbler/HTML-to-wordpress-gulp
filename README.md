@@ -44,11 +44,17 @@ Zet onderstaande comments in je index.html template:
 Ga in je terminal naar je html templates map en type onderstaande commands om gulp taken te installeren. Deze taken zorgen dat het converteren wordt gedaan.
 
 > $ npm install gulp
+
 > $ npm install gulp-header
+
 > $ npm install run-sequence
+
 > $ npm install gulp-notify
+
 > $ npm install gulp-insert
+
 > $ npm install gulp-replace
+
 > $ npm install gulp-htmlsplit
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
