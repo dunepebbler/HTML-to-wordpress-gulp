@@ -14,27 +14,27 @@ Om je footer.php, header.php en page.php te krijgen moeten we gulp een html_spli
 Zet onderstaande comments in je index.html template:
 
 **Boven je header gedeelte:**
-'''
+```
 <!-- split header.php -->
-'''
+```
 **Boven je page / body gedeelte:** 
-'''
+```
 <!-- split index.php -->
-'''
+```
 **Boven je footer gedeelte:** 
-'''
+```
 <!-- split footer.php -->
-'''
+```
 **Mocht je nog een extra pagina hebben met een andere body vormgeving, kan je een custom template aanmaken door het volgende te plaatsen:**
 
 **Boven je body gedeelte:** 
-'''
+```
 <!-- split template_naam.php -->
-'''
+```
 **Onder je body gedeelte:** 
-'''
+```
 <!-- split stop -->
-'''
+```
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 # Stap 3 - installeer gulp taken
@@ -60,9 +60,9 @@ Voer de conversie uit door het volgende command uit te voeren in je html templat
 > $ gulp start
 
 Na de conversie is er een wordpress map aangemaakt buiten je html map, hier zit namelijk je nieuwe template in. In **beide mappen** staan nog een aantal mappen die verwijderd moeten worden:
-'''
+```
  - src
  - assets
  - tmp
-'''
+```
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
