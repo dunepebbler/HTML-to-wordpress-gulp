@@ -6,6 +6,8 @@ var notify = require("gulp-notify"); // Notifications
 var insert = require('gulp-insert'); // Wrap file in get_header and get_footer
 var replace = require('gulp-replace'); // replace text in file
 var htmlsplit = require('gulp-htmlsplit'); // Split html with Header and Footer
+var del = require('del');
+
 
 
 var pkg = require('./package.json');
@@ -30,23 +32,21 @@ gulp.task('create-stylecss', function() {
 
   // Do stuff after 'create-stylecss' is done
 gulp.task('replace', function(){
-  gulp.src(['../html/app/styles/main.scss'])
-  // Replace @import bootstrap link
-  .pipe(replace('@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";', '@import "assets/_bootstrap.scss";'))
-  .pipe(gulp.dest('../wordpress/styles'));
+//  gulp.src(['../html/sass/style.scss'])
+//  .pipe(gulp.dest('../wordpress/stylesheets'));
 
   // Replace TEMPLATENAME with actuall template name
   gulp.src(['./src/functions.php'])
   .pipe(replace('TEMPLATENAME', pkg.name))
   .pipe(gulp.dest('../wordpress'));
 
-  return gulp.src(['../html/dist/*.html'])
+  return gulp.src(['../html/*.html'])
   // Add get_template_directory_uri to links
-  .pipe(replace('src="images/', 'src="<?php echo get_template_directory_uri(); ?>/images/'))
-  .pipe(replace('src="scripts', 'src="<?php echo get_template_directory_uri(); ?>/scripts'))
+  .pipe(replace('src="img/', 'src="<?php echo get_template_directory_uri(); ?>/img/'))
+  .pipe(replace('src="js', 'src="<?php echo get_template_directory_uri(); ?>/js'))
 
-  // Change styles/main.css path to css/main.css and add version numbering
-  .pipe(replace("styles/main.css", "<?php echo get_template_directory_uri().'/css/main.css?v='.filemtime( get_template_directory().'/css/main.css');?>"))
+  // Change stylesheets/main.css path to css/main.css and add version numbering
+  .pipe(replace("stylesheets/style.css", "<?php echo get_template_directory_uri().'/stylesheets/style.css?v='.filemtime( get_template_directory().'/stylesheets/style.css');?>"))
 
   // Add wp_head and wp_footer
   .pipe(replace(/<title>.{0,}<\/title>/, '<title><?php wp_title(); ?></title>'))
@@ -76,11 +76,11 @@ gulp.task('copy-files', function () {
   // Get css from Automating Template
   gulp.src(['./src/**/*', '!./src/style.css', '!./src/functions.php']).pipe(gulp.dest('../wordpress'));
     // Get files from dist (fonts, images, scripts)
-  gulp.src(['../html/dist/**/*', '!../html/dist/*.html', '!../html/dist/styles/**/*.css', '!../html/dist/*.ico', '!../html/dist/*.png', '!../html/dist/robots.txt']).pipe(gulp.dest('../wordpress'));
+  gulp.src(['../html/**/*', '!../html/*.html', '!../html/stylesheets/**/*.css', '!../html/*.ico', '!../html/*.png', '!../html/robots.txt']).pipe(gulp.dest('../wordpress'));
     // Get scss files
-  gulp.src(['../html/app/styles/**/*', '!../html/app/styles/main.scss']).pipe(gulp.dest('../wordpress/styles'));
+  gulp.src(['../html/sass/**/*', '!../html/sass/style.scss']).pipe(gulp.dest('../wordpress/sass'));
     // Get bootstrap scss
-  gulp.src('../html/bower_components/bootstrap-sass/assets/stylesheets/**/*').pipe(gulp.dest('../wordpress/styles/assets/'));
+  //gulp.src('../html/bower_components/bootstrap-sass/assets/stylesheetsheets/**/*').pipe(gulp.dest('../wordpress/stylesheets/assets/'));
   //.pipe(notify("Fonts, images, scripts, ect, are now in your wordpress theme!"));
 });
 

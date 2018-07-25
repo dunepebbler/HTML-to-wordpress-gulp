@@ -17,7 +17,7 @@ Add these comments so gulp will recognize you want to split-up your index file t
 
 )
 
-Step 23.
+Step 2.
 
 To all your other files you need to wrap your content "without header and footer" with these comments:
 

@@ -1,7 +1,7 @@
 {
   "name": "testing",
   "version": "0.1.0",
-  "description": "Test template",
+  "description": "Template",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^3.9.0"
@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pebbler/gulp-webapp-wp-template-automation.git"
+    "url": "git+https://github.com/dunepebbler/HTML-to-wordpress-gulp.git"
   },
-  "author": "Pebbler",
+  "author": "dunepebbler",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Pebbler/gulp-webapp-wp-template-automation/issues"
+    "url": "https://github.com/dunepebbler/HTML-to-wordpress-gulp/issues"
   },
-  "homepage": "https://github.com/Pebbler/gulp-webapp-wp-template-automation#readme"
+  "homepage": "https://github.com/dunepebbler/HTML-to-wordpress-gulp"
 }
