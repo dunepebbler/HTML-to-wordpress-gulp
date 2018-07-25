@@ -1,14 +1,17 @@
+# HTML naar Wordpress theme
 
 Om je html template om te zetten naar een goed ingerichte wordpress theme, moeten we een aantal handelingen verrichten. Volg dit stappenplan zorgvuldig.
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 # Stap 1 - Download bestanden
+
 Download de converteer bestanden en zet deze bestanden <span style="color: #44bcc3;">(behalve de readme)</span> in je HTML template map.
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# Stap 2 - Template split
+## Stap 2 - Template split
+
 Om je footer.php, header.php en page.php te krijgen moeten we gulp een html_split taak uit laten voeren. Deze taak zoekt naar een onderstaande comments en maakt dan van het door in jou aangegeven bestand een footer, page en header aan.
 
 Zet onderstaande comments in je index.html template:
@@ -37,7 +40,7 @@ Zet onderstaande comments in je index.html template:
 ```
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# Stap 3 - installeer gulp taken
+## Stap 3 - installeer gulp taken
 Ga in je terminal naar je html templates map en type onderstaande commands om gulp taken te installeren. Deze taken zorgen dat het converteren wordt gedaan.
 
 > $ npm install gulp
@@ -50,7 +53,7 @@ Ga in je terminal naar je html templates map en type onderstaande commands om gu
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# Stap 4 - converteren
+## Stap 4 - converteren
 Voordat we gaan converteren gaan we eerst het project een naam geven:
 
 > $ npm init (geef naam project op bij package name, de rest doorklikken met enter)
