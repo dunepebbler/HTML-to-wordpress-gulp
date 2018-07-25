@@ -4,7 +4,7 @@ Om je html template om te zetten naar een goed ingerichte wordpress theme, moete
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# Stap 1 - Download bestanden
+## Stap 1 - Download bestanden
 
 Download de converteer bestanden en zet deze bestanden <span style="color: #44bcc3;">(behalve de readme)</span> in je HTML template map.
 
