@@ -57,6 +57,8 @@ Ga in je terminal naar je html templates map en type onderstaande commands om gu
 
 > $ npm install gulp-htmlsplit
 
+> $ npm install del
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 ## Stap 4 - converteren
