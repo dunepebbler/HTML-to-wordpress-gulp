@@ -54,4 +54,14 @@ add_filter('upload_mimes', 'cc_mime_types');
 //     acf_add_options_sub_page( 'Footer' );
 //     acf_add_options_sub_page( 'Side Menu' );
 // }
+
+// Disables Plugin notifications for non-admins
+add_action('admin_enqueue_scripts', 'ds_admin_theme_style');
+add_action('login_enqueue_scripts', 'ds_admin_theme_style');
+function ds_admin_theme_style() {
+	if (!current_user_can( 'manage_options' )) {
+		echo '<style>.update-nag, .updated, .error, .is-dismissible { display: none; }</style>';
+	}
+}
+
 ?>
